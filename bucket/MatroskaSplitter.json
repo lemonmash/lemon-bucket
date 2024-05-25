@@ -1,0 +1,8 @@
+{
+    "version": "1.0",
+    "description": "Haali Media Splitter",
+    "homepage": "https://haali.net/mkv/",
+    "license": "Freeware",
+    "url": "https://haali.su/mkv/MatroskaSplitter.exe",
+    "bin": "MatroskaSplitter.exe"
+}
