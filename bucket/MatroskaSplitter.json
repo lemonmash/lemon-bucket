@@ -4,5 +4,12 @@
     "homepage": "https://haali.net/mkv/",
     "license": "Freeware",
     "url": "https://haali.su/mkv/MatroskaSplitter.exe",
-    "bin": "MatroskaSplitter.exe"
+    "installer": {
+        "file": "MatroskaSplitter.exe",
+        "keep": "true"
+    },
+    "uninstaller": {
+        "file": "MatroskaSplitter.exe",
+        "keep": "true"
+    }
 }
