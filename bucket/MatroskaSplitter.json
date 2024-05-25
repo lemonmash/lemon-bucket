@@ -5,11 +5,26 @@
     "license": "Freeware",
     "url": "https://haali.su/mkv/MatroskaSplitter.exe",
     "installer": {
-        "file": "MatroskaSplitter.exe",
-        "keep": "true"
+        "script": [
+            "if (Test-Path 'C:\\MatroskaSplitter44') {",
+            "   if ($null -eq (Get-Item 'C:\\MatroskaSplitter44').LinkType) {",
+            "       Rename-Item -Path 'C:\\MatroskaSplitter44' -NewName 'MatroskaSplitter44.old' -Force",
+            "   } else {",
+            "       Remove-Item -Path 'C:\\MatroskaSplitter44' -Force",
+            "   }",
+            "}",
+            "New-Item -Path \"$dir\\tmp\" -ItemType Directory | Out-Null",
+            "New-Item -Path 'C:\\MatroskaSplitter44' -Target \"$dir\" -ItemType Junction | Out-Null"
+        ]
     },
     "uninstaller": {
-        "file": "MatroskaSplitter.exe",
-        "keep": "true"
-    }
+        "script": [
+            "if ((Test-Path 'C:\\MatroskaSplitter44') -and ($null -ne (Get-Item 'C:\\MatroskaSplitter44').LinkType)) {",
+            "   Remove-Item -Path 'C:\\MatroskaSplitter44' -Force",
+            "}",
+            "if (Test-Path 'C:\\MatroskaSplitter44.old') {",
+            "   Rename-Item -Path 'C:\\MatroskaSplitter44.old' -NewName 'MatroskaSplitter44' -Force",
+            "}"
+        ]
+    },
 }
