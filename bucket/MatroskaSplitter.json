@@ -4,6 +4,7 @@
     "homepage": "https://haali.net/mkv/",
     "license": "Freeware",
     "url": "https://haali.su/mkv/MatroskaSplitter.exe",
+    "innosetup": true,
     "installer": {
         "script": [
             "if (Test-Path 'C:\\MatroskaSplitter44') {",
