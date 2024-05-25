@@ -12,7 +12,7 @@
         ]
     },
     "uninstaller": {
-        "file": "MatroskaSplitter.exe",
+        "file": "uninstall.exe",
         "args": "/S"
     }
 }
