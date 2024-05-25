@@ -26,5 +26,5 @@
             "   Rename-Item -Path 'C:\\MatroskaSplitter44.old' -NewName 'MatroskaSplitter44' -Force",
             "}"
         ]
-    },
+    }
 }
